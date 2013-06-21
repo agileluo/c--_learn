@@ -1,6 +1,6 @@
 
 #include <iostream>
-#include <stdlib.h>
+#include <cstdlib>
 #include <cmath>
 
 int main(int n, char **nums)
