@@ -9,12 +9,13 @@ int String::howMany(){
 }
 
 String::String(const char* s){
-	int len = std::strlen(s);
+	len = std::strlen(s);
 	str = new char[len+1];
 	std::strcpy(str, s);
 	num_strings++;
 }
 String::String(){
+	len = 0;
 	str = new char[1];
 	str[0] = '\0';
 	num_strings++;
@@ -42,7 +43,7 @@ String& String::operator=(const String& s){
 }
 String& String::operator=(const char* s){
 	delete [] str;
-	int len = std::strlen(s);
+	len = std::strlen(s);
 	str = new char[len+1];
 	std::strcpy(str, s);
 	return *this;
